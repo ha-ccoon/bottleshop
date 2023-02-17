@@ -1,3 +1,4 @@
+'use strict';
 import { Schema } from 'mongoose';
 
 const PostSchema = new Schema({
@@ -23,7 +24,8 @@ const PostSchema = new Schema({
         default: '작성자',
     },
     comment: [CommentSchema],
-}, {
+},
+{
       timestamps: true,
 });
   

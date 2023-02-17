@@ -1,3 +1,4 @@
+'use strict';
 import { Schema } from 'mongoose';
 
 const GuestSchema = new Schema({
@@ -10,7 +11,8 @@ const GuestSchema = new Schema({
         type: Number,
         required: true,
     }
-}, {
+},
+{
       timestamps: true,
 });
   

@@ -1,4 +1,5 @@
 // 스키마 모델화
+'use strict';
 import mongoose from 'mongoose';
 import UserSchema from './Schema/User';
 import GuestSchema from './Schema/Guest';

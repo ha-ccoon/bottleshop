@@ -1,3 +1,4 @@
+'use strict';
 import { Schema } from 'mongoose';
 
 const CommentSchema = new Schema({
@@ -15,7 +16,8 @@ const CommentSchema = new Schema({
         type: String,
         default: '관리자',
     },
-}, {
+},
+{
       timestamps: true,
 });
   

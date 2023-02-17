@@ -1,3 +1,4 @@
+'use strict';
 import { Schema } from 'mongoose';
 
 const UserSchema = new Schema({
@@ -23,7 +24,8 @@ const UserSchema = new Schema({
         required: true,
     },
     birthday: Date,
-  }, {
+},
+{
     timestamps: true,
 });
   
