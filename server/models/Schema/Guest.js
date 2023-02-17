@@ -10,8 +10,9 @@ const GuestSchema = new Schema({
         type: Number,
         required: true,
     }
-}, {
+},
+{
       timestamps: true,
 });
   
-export { GuestSchema };
+export default GuestSchema;

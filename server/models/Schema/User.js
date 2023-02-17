@@ -23,7 +23,8 @@ const UserSchema = new Schema({
         required: true,
     },
     birthday: Date,
-  }, {
+},
+{
     timestamps: true,
 });
   

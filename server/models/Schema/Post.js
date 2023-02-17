@@ -23,8 +23,9 @@ const PostSchema = new Schema({
         default: '작성자',
     },
     comment: [CommentSchema],
-}, {
+},
+{
       timestamps: true,
 });
   
-export { PostSchema };
+export default PostSchema;

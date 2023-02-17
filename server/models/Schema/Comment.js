@@ -15,8 +15,9 @@ const CommentSchema = new Schema({
         type: String,
         default: '관리자',
     },
-}, {
+},
+{
       timestamps: true,
 });
   
-export { CommentSchema };
+export default CommentSchema;
