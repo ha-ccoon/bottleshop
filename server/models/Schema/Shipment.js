@@ -45,6 +45,8 @@ const ShipmentSchema = new Schema({
     type: String,
     default: '대문 앞',
   },
+},
+{
   timestamps: true,
 });
 
