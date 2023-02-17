@@ -29,4 +29,4 @@ const PostSchema = new Schema({
       timestamps: true,
 });
   
-export { PostSchema };
+export default PostSchema;

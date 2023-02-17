@@ -21,4 +21,4 @@ const CommentSchema = new Schema({
       timestamps: true,
 });
   
-export { CommentSchema };
+export default CommentSchema;

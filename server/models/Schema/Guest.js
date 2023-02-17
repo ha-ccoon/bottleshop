@@ -16,4 +16,4 @@ const GuestSchema = new Schema({
       timestamps: true,
 });
   
-export { GuestSchema };
+export default GuestSchema;
