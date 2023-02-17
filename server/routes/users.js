@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+import { getUser } from '../controller/userController';
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+/* user 정보 가져오기 */
+router.get('/', getUser);
 
 module.exports = router;
