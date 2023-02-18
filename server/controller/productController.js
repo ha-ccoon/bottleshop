@@ -23,7 +23,12 @@ const postProduct = async (req, res, next) => {
       abv,
       image_path,
     });
-  } catch (e) {}
+    productInfo.save();
+    console.log('It has been uploaded in the system');
+    res.send('success');
+  } catch (e) {
+    console.log(e.message);
+  }
 };
 
 export { postProduct };

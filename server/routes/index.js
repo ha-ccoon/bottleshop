@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 // http://localhost:8080/product
 router.get('/product', (req, res) => {
-  console.log('Product page is connected');
+  res.render('product');
 });
 
 router.post('/product', postProduct);
