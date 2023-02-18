@@ -1,9 +1,34 @@
-var express = require('express');
-var router = express.Router();
+'use strict';
+import express from 'express';
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+// http://localhost:8080
+router.get('/', (req, res) => {
   res.render('index');
 });
 
-module.exports = router;
+// http://localhost:8080/product
+const productList = [
+  {
+    id: 1,
+    name: 'soju',
+    wine: true,
+  },
+];
+
+router.get('/product', (req, res) => {
+  console.log('Product page is connected');
+  res.json(productList);
+});
+
+router.post('/product', (req, res) => {
+  const { name, wine } = req.body;
+  productList.push({
+    id: id++,
+    name,
+    wine,
+  });
+  return res.send('success');
+});
+
+export default router;

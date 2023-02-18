@@ -1,14 +1,29 @@
-const createError = require('http-errors');
-const express = require('express');
-const cors = require('cors');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+import createError from 'http-errors';
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
 
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+import indexRouter from './routes/index.js';
+import usersRouter from './routes/users.js';
+
+// const createError = require('http-errors');
+// const express = require('express');
+// const cors = require('cors');
+// const path = require('path');
+// const cookieParser = require('cookie-parser');
+// const logger = require('morgan');
+
+// const indexRouter = require('./routes/index');
+// const usersRouter = require('./routes/users');
 
 const app = express();
+
+// define variables due to ES6
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,4 +55,4 @@ app.use(function (err, req, res, next) {
   // res.render('error');
 });
 
-module.exports = app;
+export default app;
