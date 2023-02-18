@@ -1,8 +1,10 @@
-const express = require('express');
+'use strict';
+import express from 'express';
 const router = express.Router();
-import { getUser } from '../controller/userController';
+
+import { getUser } from '../controller/userController.js';
 
 /* user 정보 가져오기 */
 router.get('/', getUser);
 
-module.exports = router;
+export default router;

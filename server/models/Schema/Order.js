@@ -12,12 +12,10 @@ const OrderSchema = new Schema({
     type: [Object],
     ref: 'Product',
   },
-  w_count: {
-    type: Number,
-  },
-  c_count: {
-    type: Number,
-  },
+  w_count: Number,
+  c_count: Number,
+},
+{
   timestamps: true,
 });
 
