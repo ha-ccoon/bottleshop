@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
           </a>
         </div>
         <nav class="navbar">
-          <div>
+          <div className="navbar_menu">
             <ul>
               <ol>
                 <a>Wine</a>
@@ -32,6 +32,12 @@ const Layout = ({ children }) => {
                 <a>Q&A</a>
               </ol>
             </ul>
+            <form>
+              <input className="search_bar" type="search" />
+              <button className="btn btn-outline-secces" type="sumit">
+                Search
+              </button>
+            </form>
           </div>
         </nav>
         <h3>header</h3>

@@ -1,8 +1,9 @@
-const express = require('express');
-const router = express.Router();
-import { getUser } from '../controller/userController';
+var express = require('express');
+var router = express.Router();
 
-/* user 정보 가져오기 */
-router.get('/', getUser);
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
+});
 
 module.exports = router;

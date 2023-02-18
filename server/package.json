@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www --exec babel-node",
-    "dev": "nodemon ./bin/www --exec babel-node"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -17,13 +16,5 @@
     "mongoose": "^6.9.1",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.20"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12",
-    "@babel/node": "^7.20.7",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^9.1.2"
   }
 }
