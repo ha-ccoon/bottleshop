@@ -9,16 +9,6 @@ import logger from 'morgan';
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
 
-// const createError = require('http-errors');
-// const express = require('express');
-// const cors = require('cors');
-// const path = require('path');
-// const cookieParser = require('cookie-parser');
-// const logger = require('morgan');
-
-// const indexRouter = require('./routes/index');
-// const usersRouter = require('./routes/users');
-
 const app = express();
 
 // define variables due to ES6

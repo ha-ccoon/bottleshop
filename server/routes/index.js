@@ -2,33 +2,18 @@
 import express from 'express';
 const router = express.Router();
 
+import { postProduct } from '../controller/productController.js';
+
 // http://localhost:8080
 router.get('/', (req, res) => {
   res.render('index');
 });
 
 // http://localhost:8080/product
-const productList = [
-  {
-    id: 1,
-    name: 'soju',
-    wine: true,
-  },
-];
-
 router.get('/product', (req, res) => {
-  console.log('Product page is connected');
-  res.json(productList);
+  res.render('product');
 });
 
-router.post('/product', (req, res) => {
-  const { name, wine } = req.body;
-  productList.push({
-    id: id++,
-    name,
-    wine,
-  });
-  return res.send('success');
-});
+router.post('/product', postProduct);
 
 export default router;
