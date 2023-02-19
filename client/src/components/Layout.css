@@ -1,0 +1,35 @@
+:root {
+  --main-color: #6c49b8;
+  --text-color: #566270;
+  --sub-color: #e0e3da;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "AlexBrush";
+  src: url("../fonts/AlexBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "DXPnM";
+  src: url("../fonts/DXPnM-KSCpc-EUC-H.ttf");
+}
+
+.Main_Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: AlexBrush;
+  font-weight: bolder;
+  font-size: 80px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 30px;
+  list-style: none;
+}
