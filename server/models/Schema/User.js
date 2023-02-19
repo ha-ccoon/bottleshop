@@ -3,6 +3,7 @@ import { Schema } from 'mongoose';
 
 const UserSchema = new Schema({
     _id: Schema.Types.ObjectId,
+    isAdmin: false,
     email: {
       type: String,
       required: true,
