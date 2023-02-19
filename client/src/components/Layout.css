@@ -5,8 +5,6 @@
   margin: 0;
 }
 
---#navbar-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
-
 @font-face {
   font-family: "AlexBrush";
   src: url("../fonts/AlexBrush-Regular.ttf");
@@ -29,9 +27,9 @@
   color: var(--main-color);
 }
 
-.navbar_menu {
+.navbar {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(5, auto);
   grid-gap: 30px;
   list-style: none;
 }

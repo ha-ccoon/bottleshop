@@ -13,24 +13,30 @@ const Layout = ({ children }) => {
         <nav class="navbar">
           <div className="navbar_menu">
             <ul>
-              <ol>
+              <li>
                 <a>Wine</a>
-                <ol>
-                  <a>RedWine</a>
-                </ol>
-                <ol>
-                  <a>WhiteWine</a>
-                </ol>
-                <ol>
-                  <a>Champane</a>
-                </ol>
-              </ol>
-              <ol>
+                <ul>
+                  <li>
+                    <a>RedWine</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a>WhiteWine</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a>Champane</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
                 <a>Cheeses</a>
-              </ol>
-              <ol>
+              </li>
+              <li>
                 <a>Q&A</a>
-              </ol>
+              </li>
             </ul>
             <form>
               <input className="search_bar" type="search" />
