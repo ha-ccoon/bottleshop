@@ -24,11 +24,11 @@ const postProduct = async (req, res, next) => {
       image_path,
     });
     productInfo.save();
-    console.log('It has been uploaded in the system');
+    console.log('saved in database');
     res.send('success');
   } catch (e) {
     console.log(e.message);
   }
 };
 
-export { postProduct };
+export default postProduct;
