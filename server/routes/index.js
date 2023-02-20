@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
 // http://localhost:8080/product
 router.get('/product', (req, res) => {
-  res.render('product');
+  res.render('success');
 });
 
 router.post('/product', postProduct);

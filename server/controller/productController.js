@@ -13,6 +13,7 @@ const postProduct = async (req, res, next) => {
       abv,
       image_path,
     } = req.body;
+
     const productInfo = await Product.create({
       name,
       type,

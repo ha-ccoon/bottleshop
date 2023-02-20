@@ -8,10 +8,14 @@ const OrderSchema = new Schema(
       ref: 'User',
       // required: true,
     },
-    product_id: {
-      type: [Object],
-      ref: 'Product',
+    guest_id: {
+      type: Schema.Types.ObjectId,
+      ref: 'guest',
     },
+    product_id: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Product',
+    }],
     w_count: Number,
     c_count: Number,
   },
