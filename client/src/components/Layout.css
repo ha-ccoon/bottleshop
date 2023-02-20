@@ -1,8 +1,10 @@
 :root {
   --main-color: #6c49b8;
   --text-color: #566270;
-  --sub-color: #e0e3da;
+  --sub-color: #d9d9d9;
   margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 @font-face {
@@ -12,6 +14,23 @@
 @font-face {
   font-family: "DXPnM";
   src: url("../fonts/DXPnM-KSCpc-EUC-H.ttf");
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  margin: 0;
+}
+
+.main_content {
+  flex: 1;
 }
 
 .Main_Logo {
@@ -28,8 +47,35 @@
 }
 
 .navbar {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  grid-gap: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 10px;
+
   list-style: none;
+  background-color: var(--main-color);
+  color: #ffffff;
+  font-family: DXPnM;
+}
+
+.search_bar {
+  border-radius: 5px;
+}
+
+.main_content {
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--sub-color);
+  color: var(--text-color);
+  font-family: DXPnM;
+  position: relative;
+  transform: rotateY(-100%);
+  width: 100%;
+}
+
+.footer > div > div > h2 {
+  font-weight: bolder;
 }

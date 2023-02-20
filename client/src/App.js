@@ -10,7 +10,6 @@ export default function App() {
   return (
     <div className="App">
       <Layout>
-        bottleshop
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Categories />}></Route>
