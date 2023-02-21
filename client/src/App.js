@@ -4,7 +4,8 @@ import "./App.css";
 import Layout from "./components/Layout";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Categories from "./components/Categories";
-import Admin from "./components/Admin";
+import Admin_product from "./components/Admin/Admin_product";
+import Admin_user from "./components/Admin/Admin_user";
 
 export default function App() {
   return (
@@ -14,7 +15,12 @@ export default function App() {
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Categories />}></Route>
-            <Route exact path="/admin" element={<Admin />}></Route>
+            <Route
+              exact
+              path="/admin/product"
+              element={<Admin_product />}
+            ></Route>
+            <Route exact path="/admin/user" element={<Admin_user />}></Route>
           </Routes>
         </BrowserRouter>
       </Layout>
