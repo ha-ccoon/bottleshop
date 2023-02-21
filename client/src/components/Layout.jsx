@@ -1,14 +1,19 @@
-import React from "react";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCartPlus,
-  faUser,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Offcanvas from "react-bootstrap/Offcanvas";
 import "./Layout.css";
 
 const Layout = ({ children }) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <div className="wrapper">
       <header>
@@ -17,42 +22,50 @@ const Layout = ({ children }) => {
             Bottle Shop
           </a>
         </div>
-        <nav class="contaier">
-          <div>
-            <ul className="navbar">
-              <li>
-                <a>Wine</a>
-                {/* <ul>
-                  <li>
-                    <a>RedWine</a>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <a>WhiteWine</a>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <a>Champane</a>
-                  </li>
-                </ul> */}
-              </li>
-              <li>
-                <a>Cheeses</a>
-              </li>
-              <li>
-                <a>Q&A</a>
-              </li>
-              <form>
-                <input className="search_bar" type="search" />
-                <button className="buttonSearch">
-                  <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
-                </button>
-              </form>
-            </ul>
-          </div>
-        </nav>
+        <Navbar bg="light" expand="lg">
+          <Container fluid>
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse id="navbarScroll">
+              <Nav
+                className="me-auto my-2 my-lg-0"
+                style={{ maxHeight: "100px" }}
+                navbarScroll
+              >
+                <Nav.Link href="#">Wine</Nav.Link>
+                <Nav.Link href="#">Cheeses</Nav.Link>
+                <NavDropdown title="Wine" id="navbarScrollingDropdown">
+                  <NavDropdown.Item href="#">Red Wine</NavDropdown.Item>
+                  <NavDropdown.Item href="#">White Wine</NavDropdown.Item>
+                  <NavDropdown.Item href="#">Champane</NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+              <Form className="d-flex">
+                <Form.Control
+                  type="search"
+                  placeholder="Search"
+                  className="me-2"
+                  aria-label="Search"
+                />
+                <Button variant="outline-success">Search</Button>
+              </Form>
+            </Navbar.Collapse>
+            <Button variant="primary" onClick={handleShow}>
+              Launch
+            </Button>
+
+            <Offcanvas show={show} onHide={handleClose}>
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>
+                  Bottle Shop <br />
+                  로그인 해주세요.
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                계정정보 <hr />
+              </Offcanvas.Body>
+            </Offcanvas>
+          </Container>
+        </Navbar>
       </header>
       <main className="main_content">{children}</main>
       <footer className="footer">

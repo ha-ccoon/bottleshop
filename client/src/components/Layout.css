@@ -21,45 +21,25 @@ body {
   height: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-
-  text-align: center;
-  margin: 0;
-}
-
-.main_content {
-  flex: 1;
-}
-
 .Main_Logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5px 0;
 
   font-family: AlexBrush;
   font-weight: bolder;
-  font-size: 80px;
+  font-size: 100px;
   text-align: center;
   text-decoration: none;
   color: var(--main-color);
 }
 
 .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-left: 10px;
-
+  padding-left: 30px;
+  font-size: 2rem;
   list-style: none;
-  background-color: var(--main-color);
-  color: #ffffff;
   font-family: DXPnM;
-}
-
-.search_bar {
-  border-radius: 5px;
 }
 
 .main_content {

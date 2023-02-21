@@ -18,26 +18,68 @@
 }
 
 .main_img {
-  height: 700px;
+  padding-top: 100px;
   overflow: hidden;
 }
 
 .main_img > img {
+  height: 800px;
   width: 100%;
 }
 
-.main_container > div > img {
+.wine1 > img {
   background-color: #6c49b850;
 }
 
-.main_container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+.BestItem {
+  font-family: "DXPnM";
+  font-size: 5rem;
+  color: var(--main-color);
+  padding: 30px 0;
+}
+
+.best_image {
+  display: flex;
+  justify-content: space-between;
   align-content: center;
 
-  padding-top: 10px;
-  font-family: "DXPnM";
   font-size: 1.3rem;
   object-fit: fill;
   overflow: hidden;
+}
+
+.main_container > div > p {
+  padding-top: 30px;
+}
+
+.Main_about {
+  font-family: "DXPnM";
+  font-size: 1.3rem;
+  padding: 10px 10px;
+  background-color: #6c49b820;
+}
+
+.about_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+}
+
+.about_1 > img {
+  max-width: 500px;
+}
+
+.about_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+}
+
+.about_3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
 }
