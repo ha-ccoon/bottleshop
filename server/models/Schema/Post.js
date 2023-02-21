@@ -4,7 +4,6 @@ import CommentSchema from './Comment.js';
 
 const PostSchema = new Schema(
   {
-    _id: Schema.Types.ObjectId,
     isAdmin: false,
     user_id: {
       type: Schema.Types.ObjectId,
