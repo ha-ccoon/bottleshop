@@ -2,26 +2,51 @@ import React from "react";
 import "./Categories.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import main from "./main/main.png";
-import Red1 from "./main/red1.png";
-import White2 from "./main/white2.png";
-import Champ1 from "./main/champ1.png";
-import Cheeses1 from "./main/Parmesan.png";
-import Cheeses2 from "./main/Ricotta1.png";
-import Main_about1 from "./main/main_about_01.png";
-import Main_about2 from "./main/main_about_02.png";
-import Main_about3 from "./main/main_about_03.png";
+import Carousel from "react-bootstrap/Carousel";
+import main from "./images/main.png";
+import wine from "./images/wine.png";
+import cheeses from "./images/cheeses.png";
+import Red1 from "./images/red1.png";
+import White2 from "./images/white2.png";
+import Champ1 from "./images/champ1.png";
+import Cheeses1 from "./images/Parmesan.png";
+import Cheeses2 from "./images/Ricotta1.png";
+import Main_about1 from "./images/main_about_01.png";
+import Main_about2 from "./images/main_about_02.png";
+import Main_about3 from "./images/main_about_03.png";
 
 const Categories = () => {
   return (
     <>
       <div>
-        <div className="main_img">
-          <img src={main} alt="mainImage" />
-        </div>
+        <Carousel className="banner">
+          <Carousel.Item>
+            <img className="d-block w-100" src={main} alt="First slide" />
+            <Carousel.Caption>
+              <h3>White Day Event!!</h3>
+              <p>연인과 함께 특별한 날을 보내세요.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={wine} alt="Second slide" />
+
+            <Carousel.Caption>
+              <h3>Wine is Special</h3>
+              <p>Bottle Shop is Special</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={cheeses} alt="Third slide" />
+
+            <Carousel.Caption>
+              <h3>Bottle Shop = Cheeses Heaven</h3>
+              <p>여러분은 나만의 Cheeses를 찾으셨나요?</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
         <div className="BestItem">
           <p className="best_text">Best Item</p>
-          <div className="best_image">
+          <div className="best_item">
             <div className="Red1">
               <Card style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={Red1} />

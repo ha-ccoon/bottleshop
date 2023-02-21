@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
     <div className="wrapper">
       <header>
         <div>
-          <a class="Main_Logo" href="">
+          <a class="Main_Logo" href="/">
             Bottle Shop
           </a>
         </div>
@@ -31,13 +31,19 @@ const Layout = ({ children }) => {
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link href="#">Wine</Nav.Link>
-                <Nav.Link href="#">Cheeses</Nav.Link>
                 <NavDropdown title="Wine" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#">Red Wine</NavDropdown.Item>
-                  <NavDropdown.Item href="#">White Wine</NavDropdown.Item>
-                  <NavDropdown.Item href="#">Champane</NavDropdown.Item>
+                  <NavDropdown.Item href="/categories/wine">
+                    Red Wine
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/categories/wine">
+                    White Wine
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/categories/wine">
+                    Champane
+                  </NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="/categories/cheeses">Cheeses</Nav.Link>
+                <Nav.Link href="#">Q&A</Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
@@ -49,7 +55,7 @@ const Layout = ({ children }) => {
                 <Button variant="outline-success">Search</Button>
               </Form>
             </Navbar.Collapse>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="white" onClick={handleShow}>
               Launch
             </Button>
 
@@ -62,6 +68,10 @@ const Layout = ({ children }) => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 계정정보 <hr />
+                로그인 <br />
+                회원가입 <br />
+                주문조회
+                <br />
               </Offcanvas.Body>
             </Offcanvas>
           </Container>
