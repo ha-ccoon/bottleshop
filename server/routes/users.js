@@ -1,10 +1,12 @@
-'use strict';
-import express from 'express';
+"use strict";
+import express from "express";
 const router = express.Router();
 
-import { getUser } from '../controller/userController.js';
+import { getUser } from "../controller/userController.js";
 
-/* user 정보 가져오기 */
-router.get('/', getUser);
+/* GET users listing. */
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
+});
 
 export default router;
