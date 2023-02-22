@@ -1,10 +1,10 @@
 'use strict';
-import mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 import bcrypt from 'bcrypt';  // "npm i bcrypt --save" 설치 필요
 import jwt from "jsonwebtoken"; // "npm i jsonwebtoken" 설치 필요
 const saltRounds = 10;
 
-const UserSchema = mongoose.Schema(
+const UserSchema = new Schema(
   {
     isAdmin: false,
     emailId: {
