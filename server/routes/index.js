@@ -5,6 +5,7 @@ const router = express.Router();
 import postProduct from '../controller/productController.js';
 import postOrder from '../controller/orderController.js';
 import postShipment from '../controller/shipmentController.js';
+import { Product } from '../models/index.js';
 
 // http://localhost:8080
 router.get('/', (req, res) => {
@@ -12,24 +13,27 @@ router.get('/', (req, res) => {
 });
 
 // http://localhost:8080/product
-router.get('/product', (req, res) => {
-  res.render('success');
+router.get('/products', async (req, res) => {
+  const products = await Product.find({});
+  res.send(products);
 });
 
-router.post('/product', postProduct);
+
+
+router.post('/products', postProduct);
 
 // http://localhost:8080/order
-router.get('/order', (req, res) => {
-  res.render('order');
+router.get('/orders', async (req, res) => {
+  res.json(req.body);
 });
 
-router.post('/order', postOrder);
+router.post('/orders', postOrder);
 
 // http://localhost:8080/shipment
-router.get('/shipment', (req, res) => {
-  res.render('shipment');
+router.get('/shipments', (req, res) => {
+  res.json(req.body);
 });
 
-router.post('/shipment', postShipment);
+router.post('/shipments', postShipment);
 
 export default router;
