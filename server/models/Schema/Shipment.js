@@ -4,7 +4,7 @@ import { Schema } from 'mongoose';
 const ShipmentSchema = new Schema(
   {
     order_id: {
-      type: String,
+      type: Schema.Types.ObjectId,
       ref: 'Order',
       required: true,
     },
@@ -16,7 +16,7 @@ const ShipmentSchema = new Schema(
     guest_id: {
       type: Schema.Types.ObjectId,
       ref: 'Guest',
-      required: true,
+      // required: true,
     },
     tracking_number: {
       type: String,
