@@ -2,7 +2,7 @@
 import { User } from '../models/index.js';
 
 const deleteUser = function (id, callback) {
-    User.deleteOne({ emailId : id }, (err, user) => {
+    User.deleteOne({ userId : id }, (err, user) => {
         if(err) {
             callback(err, null);
         }
@@ -12,9 +12,9 @@ const deleteUser = function (id, callback) {
 }
 
 
-// [input] emailId
+// [input] userId
 const dropUser = (req, res) => {
-    const id = req.body.emailId;
+    const id = req.body.userId;
     console.log('회원탈퇴할 ID : ' + id);
     deleteUser(id, (err, user) => {
         if(err) {

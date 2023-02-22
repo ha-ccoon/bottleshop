@@ -2,10 +2,10 @@
 import { User } from '../models/index.js';
 
 const getLogin = async (req, res, next) => {
-    const { emailId, password } = req.body;
+    const { userId, password } = req.body;
     try {
         // email DB 존재 확인
-        await User.findOne({ emailId }, (err, user) => {
+        await User.findOne({ userId }, (err, user) => {
             if (err) {
                 res.send("존재하지 않은 아이디입니다.");
             }

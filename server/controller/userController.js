@@ -3,7 +3,7 @@ import { User } from '../models/index.js';
 
 const getUser = async (req, res, next) => {
   const {
-    emailId,
+    userId,
     domain,
     password,
     name,
@@ -13,23 +13,23 @@ const getUser = async (req, res, next) => {
   } = req.body;
   
   try {
-    const user = await User.findOne({ emailId });
+    const user = await User.findOne({ userId });
     
-    if(user) {  // 이메일 중복 확인
-      console.log('"' + emailId + '" already exists');
+    if(user) {  // 아이디 중복 확인
+      console.log('"' + userId + '" already exists');
       res.send('User already exists');
     }
 
     else {
-      const adminValue = false;
+      let adminValue = false;
       
-      if(emailId === "admin") {
+      if(userId === "admin") {
         adminValue = true;
         console.log("getADMIN");
       }
       const userInfo = await User.create({
         isAdmin:adminValue,
-        emailId,
+        userId,
         domain,
         password,
         name,
@@ -40,7 +40,7 @@ const getUser = async (req, res, next) => {
       userInfo.save();
 
       console.log('It has been uploaded "USER" in the system');
-      res.send('success "USRE"');
+      res.send('success "USER"');
     } 
   } catch (e) {
     console.log(e.message);
