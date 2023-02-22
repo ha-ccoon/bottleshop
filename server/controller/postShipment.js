@@ -35,7 +35,7 @@ const postShipment = async (req, res, next) => {
 
     console.log(shipmentInfo);
     shipmentInfo.save();
-    res.send('success');
+    res.send('success /shipments');
     console.log('saved in database');
   } catch (err) {
     console.log(err.message);

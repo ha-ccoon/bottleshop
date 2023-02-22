@@ -26,7 +26,7 @@ const postProduct = async (req, res, next) => {
     });
     productInfo.save();
     console.log('saved in database');
-    res.send('success');
+    res.send('success /products');
   } catch (err) {
     console.log(err.message);
   }
