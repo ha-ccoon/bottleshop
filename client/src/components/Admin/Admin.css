@@ -13,23 +13,11 @@
   font-family: "DXPnM";
   src: url("../../fonts/DXPnM-KSCpc-EUC-H.ttf");
 }
-
-#nav_active {
-  color: var(--sub-color);
-  background-color: var(--main-color);
-  border-color: var(--sub-color);
-}
-
-#nav_normal {
-  color: var(--main-color);
-  background-color: var(--sub-color);
-  border-color: var(--sub-color);
-}
-
-#nav_normal:hover {
-  color: var(--sub-color);
-  background-color: var(--main-color);
-  border-color: var(--sub-color);
+#nav_bar {
+  --bs-nav-link-color: var(--main-color);
+  --bs-nav-tabs-link-active-color: var(--sub-color);
+  --bs-nav-tabs-link-active-bg: var(--main-color);
+  --bs-nav-link-hover-color: var(--main-color);
 }
 
 h2 {
@@ -78,7 +66,10 @@ h2 {
 }
 
 #page {
-  color: var(--main-color);
   margin: 20px 0;
   justify-content: center;
+  --bs-pagination-active-color: var(--sub-color);
+  --bs-pagination-active-bg: var(--main-color);
+  --bs-pagination-active-border-color: var(--main-color);
+  --bs-pagination-color: var(--main-color);
 }

@@ -1,4 +1,5 @@
-import React from "react";
+import "./Admin.css";
+import { React, useEffect, useState } from "react";
 import {
   Nav,
   Button,
@@ -8,12 +9,22 @@ import {
   Pagination,
 } from "react-bootstrap";
 import axios from "axios";
-import "./Admin_product.css";
 
 const api = require("../../API.json");
 
 const Admin = () => {
-  const onSubmitHandler = (e) => {
+  const [todoList, setTodoList] = useState(null);
+
+  const fetchData = async () => {
+    const response = await axios.get(api.product);
+    setTodoList(response.data);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const onSubmitHandler = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const type = e.target.type.value;
@@ -24,7 +35,7 @@ const Admin = () => {
     const abv = e.target.abv.value;
     const image_path = e.target.image_path.value;
 
-    axios.post(api.product, {
+    await axios.post(api.product, {
       name,
       type,
       price,
@@ -34,6 +45,7 @@ const Admin = () => {
       abv,
       image_path,
     });
+    fetchData();
   };
 
   // 페이지 수를 정해주는거
@@ -47,19 +59,29 @@ const Admin = () => {
     );
   }
 
+  const popup = () => console.log("구현중");
+
+  // 리스트 구현
+  let list = [];
+  {
+    todoList?.map((todo, num) =>
+      list.push(
+        <ListGroup.Item key={num} action onClick={popup}>
+          {todo.name}
+        </ListGroup.Item>
+      )
+    );
+  }
+
   return (
     <>
       {/* 네비게이션 바 */}
-      <Nav variant="tabs" defaultActiveKey="/admin/product">
+      <Nav id="nav_bar" variant="tabs" defaultActiveKey="/admin/product">
         <Nav.Item>
-          <Nav.Link id="nav_active" href="/admin/product">
-            Product
-          </Nav.Link>
+          <Nav.Link href="/admin/product">Product</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link id="nav_normal" href="/admin/user">
-            User
-          </Nav.Link>
+          <Nav.Link href="/admin/user">User</Nav.Link>
         </Nav.Item>
       </Nav>
 
@@ -81,12 +103,12 @@ const Admin = () => {
 
         {/* DB입력 부분 */}
         <div class="product_DB">
-          <Form.Group className="mb-1" controlId="form_Name">
+          <Form.Group className="mb-1">
             <Form.Label>Name</Form.Label>
             <Form.Control name="name" type="text" placeholder="String" />
           </Form.Group>
 
-          <Form.Group className="mb-1" controlId="form_Type">
+          <Form.Group className="mb-1">
             <Form.Label>Type</Form.Label>
             <Form.Select name="type">
               <option></option>
@@ -95,38 +117,37 @@ const Admin = () => {
             </Form.Select>
           </Form.Group>
 
-          <Form.Group className="mb-1" controlId="form_Price">
+          <Form.Group className="mb-1">
             <Form.Label>Price</Form.Label>
             <Form.Control name="price" type="text" placeholder="Number" />
           </Form.Group>
 
-          <Form.Group className="mb-1" controlId="form_Description">
+          <Form.Group className="mb-1">
             <Form.Label>Description</Form.Label>
             <Form.Control name="description" type="text" placeholder="String" />
           </Form.Group>
 
-          <Form.Group className="mb-1" controlId="form_Wine_type">
+          <Form.Group className="mb-1">
             <Form.Label>Wine_type</Form.Label>
             <Form.Select name="wine_type">
               <option></option>
-              <option value="Red_Wine">Red_Wine</option>
-              <option value="White_Wine">White_Wine</option>
+              <option value="Red_Wine">Red</option>
+              <option value="White_Wine">White</option>
               <option value="Sparkling">Sparkling</option>
-              <option value="Champagne">Champagne</option>
             </Form.Select>
           </Form.Group>
 
-          <Form.Group className="mb-1" controlId="form_Origin">
+          <Form.Group className="mb-1">
             <Form.Label>Origin</Form.Label>
             <Form.Control name="origin" type="text" placeholder="String" />
           </Form.Group>
 
-          <Form.Group className="mb-1" controlId="form_Abv">
+          <Form.Group className="mb-1">
             <Form.Label>Abv</Form.Label>
             <Form.Control name="abv" type="text" placeholder="Number" />
           </Form.Group>
 
-          <Form.Group className="mb-1" controlId="form_Image_path">
+          <Form.Group className="mb-1">
             <Form.Label>Image_path</Form.Label>
             <Form.Control name="image_path" type="text" placeholder="String" />
           </Form.Group>
@@ -135,23 +156,7 @@ const Admin = () => {
 
       {/* 리스트 */}
       <div id="product_list">
-        <ListGroup>
-          <ListGroup.Item action onClick>
-            Test1
-          </ListGroup.Item>
-          <ListGroup.Item action onClick>
-            Test2
-          </ListGroup.Item>
-          <ListGroup.Item action onClick>
-            Test3
-          </ListGroup.Item>
-          <ListGroup.Item action onClick>
-            Test4
-          </ListGroup.Item>
-          <ListGroup.Item action onClick>
-            Test5
-          </ListGroup.Item>
-        </ListGroup>
+        <ListGroup>{list}</ListGroup>
         <Pagination id="page" size="sm">
           {items}
         </Pagination>
