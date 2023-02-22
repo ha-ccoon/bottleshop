@@ -13,6 +13,7 @@ const postProduct = async (req, res, next) => {
       abv,
       image_path,
     } = req.body;
+
     const productInfo = await Product.create({
       name,
       type,
@@ -23,7 +24,12 @@ const postProduct = async (req, res, next) => {
       abv,
       image_path,
     });
-  } catch (e) {}
+    productInfo.save();
+    console.log('saved in database');
+    res.send('success');
+  } catch (e) {
+    console.log(e.message);
+  }
 };
 
-export { postProduct };
+export default postProduct;

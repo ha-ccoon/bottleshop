@@ -1,7 +1,8 @@
 'use strict';
 import { Schema } from 'mongoose';
 
-const UserSchema = new Schema({
+const UserSchema = new Schema(
+  {
     _id: Schema.Types.ObjectId,
     email: {
       type: String,
@@ -12,21 +13,22 @@ const UserSchema = new Schema({
       required: true,
     },
     name: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     phone: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
     auth_email: {
-        Boolean: false,
-        required: true,
+      type: Boolean,
+      required: true,
     },
     birthday: Date,
-},
-{
+  },
+  {
     timestamps: true,
-});
-  
+  }
+);
+
 export default UserSchema;

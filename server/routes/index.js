@@ -2,18 +2,17 @@
 import express from 'express';
 const router = express.Router();
 
-import { postProduct } from '../controller/productController.js';
+import productsRouter from './products.js';
+import ordersRouter from './orders.js';
+import shipmentsRouter from './shipments.js';
 
 // http://localhost:8080
 router.get('/', (req, res) => {
   res.render('index');
 });
 
-// http://localhost:8080/product
-router.get('/product', (req, res) => {
-  console.log('Product page is connected');
-});
-
-router.post('/product', postProduct);
+router.use('/products', productsRouter);
+router.use('/orders', ordersRouter);
+router.use('/shipments', shipmentsRouter);
 
 export default router;
