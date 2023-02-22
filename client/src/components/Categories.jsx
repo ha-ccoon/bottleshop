@@ -53,8 +53,12 @@ const Categories = () => {
                 <Card.Body>
                   <Card.Title>BODEGA GARZON 'BALASTO'</Card.Title>
                   <Card.Text>200,000원</Card.Text>
-                  <Button>장바구니에 담기</Button>
-                  <Button>구매하기</Button>
+                  <button type="button" class="btn btn-outline-info">
+                    장바구니
+                  </button>
+                  <button type="button" class="btn btn-outline-success">
+                    구매하기
+                  </button>
                 </Card.Body>
               </Card>
             </div>
@@ -64,8 +68,12 @@ const Categories = () => {
                 <Card.Body>
                   <Card.Title>FRIAS LADY OF DEAD</Card.Title>
                   <Card.Text>35,000원</Card.Text>
-                  <Button>장바구니에 담기</Button>
-                  <Button>구매하기</Button>
+                  <button type="button" class="btn btn-outline-info">
+                    장바구니
+                  </button>
+                  <button type="button" class="btn btn-outline-success">
+                    구매하기
+                  </button>
                 </Card.Body>
               </Card>
             </div>
@@ -75,8 +83,12 @@ const Categories = () => {
                 <Card.Body>
                   <Card.Title>BANROCK STATION MOSCATO</Card.Title>
                   <Card.Text>13,000원</Card.Text>
-                  <Button>장바구니에 담기</Button>
-                  <Button>구매하기</Button>
+                  <button type="button" class="btn btn-outline-info">
+                    장바구니
+                  </button>
+                  <button type="button" class="btn btn-outline-success">
+                    구매하기
+                  </button>
                 </Card.Body>
               </Card>
             </div>
@@ -86,8 +98,12 @@ const Categories = () => {
                 <Card.Body>
                   <Card.Title>Parmesan Cheeses</Card.Title>
                   <Card.Text>58,000원</Card.Text>
-                  <Button>장바구니에 담기</Button>
-                  <Button>구매하기</Button>
+                  <button type="button" class="btn btn-outline-info">
+                    장바구니
+                  </button>
+                  <button type="button" class="btn btn-outline-success">
+                    구매하기
+                  </button>
                 </Card.Body>
               </Card>
             </div>
@@ -97,8 +113,12 @@ const Categories = () => {
                 <Card.Body>
                   <Card.Title>Ricotta Cheeses</Card.Title>
                   <Card.Text>18,000원</Card.Text>
-                  <Button>장바구니에 담기</Button>
-                  <Button>구매하기</Button>
+                  <button type="button" class="btn btn-outline-info">
+                    장바구니
+                  </button>
+                  <button type="button" class="btn btn-outline-success">
+                    구매하기
+                  </button>
                 </Card.Body>
               </Card>
             </div>

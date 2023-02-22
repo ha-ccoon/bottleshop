@@ -7,6 +7,9 @@
   height: 100%;
   text-align: center;
 }
+body {
+  background-color: #6c49b8;
+}
 
 @font-face {
   font-family: "AlexBrush";
@@ -24,10 +27,11 @@
   overflow: hidden;
 }
 
-h3 {
-  font-family: "DXPnM";
-  font-size: 4rem;
+.wine_text {
   color: var(--main-color);
+  padding: 50px 0;
+  font-family: "DXPnM";
+  font-size: 5rem;
 }
 
 .best_wine {
@@ -43,7 +47,12 @@ h3 {
   display: flex;
   justify-content: space-evenly;
 
-  padding: 100px;
+  padding: 50px;
   font-family: "DXPnM";
   font-size: 1.5rem;
+}
+
+.page_go {
+  display: flex;
+  justify-content: center;
 }

@@ -24,10 +24,11 @@
   overflow: hidden;
 }
 
-h3 {
-  font-family: "DXPnM";
-  font-size: 4rem;
+.cheeses_text {
   color: var(--main-color);
+  padding: 50px 0;
+  font-family: "DXPnM";
+  font-size: 5rem;
 }
 
 .best_cheeses {
@@ -35,6 +36,7 @@ h3 {
   font-size: 1.5rem;
   display: flex;
   justify-content: space-evenly;
+  padding: 50px 0;
 }
 
 .cheeses_list1,

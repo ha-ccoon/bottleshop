@@ -34,6 +34,10 @@
   overflow: hidden;
 }
 
+.btn {
+  font-size: 8rem;
+}
+
 .main_container > div > p {
   padding-top: 30px;
 }

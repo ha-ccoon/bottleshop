@@ -10,7 +10,7 @@ const Cheeses = () => {
       <div className="cheese_img">
         <img src={Cheesesmain} />
       </div>
-      <h3>Best Cheeses</h3>
+      <h3 className="cheeses_text">Best Cheeses</h3>
       <div className="best_cheeses">
         <div>
           <Card style={{ width: "18rem" }}>
@@ -21,7 +21,12 @@ const Cheeses = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <button type="button" class="btn btn-outline-info">
+                장바구니
+              </button>
+              <button type="button" class="btn btn-outline-success">
+                구매하기
+              </button>
             </Card.Body>
           </Card>
         </div>
@@ -34,7 +39,12 @@ const Cheeses = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <button type="button" class="btn btn-outline-info">
+                장바구니
+              </button>
+              <button type="button" class="btn btn-outline-success">
+                구매하기
+              </button>
             </Card.Body>
           </Card>
         </div>
@@ -47,7 +57,12 @@ const Cheeses = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <button type="button" class="btn btn-outline-info">
+                장바구니
+              </button>
+              <button type="button" class="btn btn-outline-success">
+                구매하기
+              </button>
             </Card.Body>
           </Card>
         </div>
@@ -60,7 +75,12 @@ const Cheeses = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <button type="button" class="btn btn-outline-info">
+                장바구니
+              </button>
+              <button type="button" class="btn btn-outline-success">
+                구매하기
+              </button>
             </Card.Body>
           </Card>
         </div>
@@ -73,13 +93,18 @@ const Cheeses = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <button type="button" class="btn btn-outline-info">
+                장바구니
+              </button>
+              <button type="button" class="btn btn-outline-success">
+                구매하기
+              </button>
             </Card.Body>
           </Card>
         </div>
       </div>
       <hr />
-      <h3>Cheeses</h3>
+      <h3 className="cheeses_text">Cheeses</h3>
       <div>
         <div className="cheeses_list1">
           <div>
@@ -91,7 +116,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -104,7 +134,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -117,7 +152,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -130,7 +170,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -145,7 +190,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -158,7 +208,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -171,7 +226,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -184,7 +244,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -199,7 +264,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -212,7 +282,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -225,7 +300,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -238,7 +318,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -253,7 +338,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -266,7 +356,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -279,7 +374,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -292,7 +392,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -307,7 +412,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -320,7 +430,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -333,7 +448,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>
@@ -346,7 +466,12 @@ const Cheeses = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <button type="button" class="btn btn-outline-info">
+                  장바구니
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  구매하기
+                </button>
               </Card.Body>
             </Card>
           </div>

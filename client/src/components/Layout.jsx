@@ -33,13 +33,16 @@ const Layout = ({ children }) => {
               >
                 <NavDropdown title="Wine" id="navbarScrollingDropdown">
                   <NavDropdown.Item href="/categories/wine">
+                    All Wine
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/categories/wine">
                     Red Wine
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/categories/wine">
                     White Wine
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/categories/wine">
-                    Champane
+                    Sparkling Wine
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="/categories/cheeses">Cheeses</Nav.Link>
@@ -93,9 +96,6 @@ const Layout = ({ children }) => {
                 rights reserved.
               </li>
             </ul>
-            <div className="row">
-              <h5></h5>
-            </div>
           </div>
         </div>
       </footer>
