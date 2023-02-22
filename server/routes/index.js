@@ -1,9 +1,19 @@
-var express = require('express');
-var router = express.Router();
+"use strict";
+import express from "express";
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+import { postProduct } from "../controller/productController.js";
+
+// http://localhost:8080
+router.get("/", (req, res) => {
+  res.render("index");
 });
 
-module.exports = router;
+// http://localhost:8080/product
+router.get("/product", (req, res) => {
+  res.render("product");
+});
+
+router.post("/product", postProduct);
+
+export default router;
