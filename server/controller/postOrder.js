@@ -21,8 +21,8 @@ const postOrder = async (req, res, next) => {
 
     console.log('saved in database');
     res.send(result);
-  } catch (e) {
-    console.log(e.message);
+  } catch (err) {
+    console.log(err.message);
   }
 };
 
