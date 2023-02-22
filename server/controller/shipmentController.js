@@ -6,6 +6,7 @@ const postShipment = async (req, res, next) => {
     const {
       order_id,
       user_id,
+      guest_id,
       tracking_number,
       city,
       district,
@@ -19,8 +20,9 @@ const postShipment = async (req, res, next) => {
     const existedOrder = await Order.findById(order_id);
 
     const shipmentInfo = await Shipment.create({
-      order_id: existedOrder,
+      order_id,
       user_id,
+      guest_id,
       tracking_number,
       city,
       district,
@@ -30,6 +32,8 @@ const postShipment = async (req, res, next) => {
       phone,
       request,
     });
+
+    console.log(shipmentInfo);
     shipmentInfo.save();
     res.send('success');
     console.log('saved in database');

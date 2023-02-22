@@ -16,14 +16,6 @@ const postOrder = async (req, res, next) => {
       .populate('product_id', 'type price')
       .exec();
 
-    // populate user_id
-    await Order.findOne({ user_id: user_id }).populate('user_id', '_id').exec();
-
-    //populate guest_id
-    await Order.findOne({ guest_id: guest_id })
-      .populate('guest_id', '_id')
-      .exec();
-
     orderInfo.save();
 
     console.log('saved in database');

@@ -6,12 +6,17 @@ const ShipmentSchema = new Schema(
     order_id: {
       type: String,
       ref: 'Order',
-      // required: true,
+      required: true,
     },
     user_id: {
       type: Schema.Types.ObjectId,
       ref: 'Order',
-      // required: true,
+      required: true,
+    },
+    guest_id: {
+      type: Schema.Types.ObjectId,
+      ref: 'Guest',
+      required: true,
     },
     tracking_number: {
       type: String,
