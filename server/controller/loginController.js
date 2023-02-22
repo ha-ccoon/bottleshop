@@ -36,4 +36,4 @@ const getLogin = async (req, res, next) => {
     }
 };
 
-export { getLogin };
+export default getLogin;

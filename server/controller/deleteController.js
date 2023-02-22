@@ -1,5 +1,6 @@
 'use strict';
 import { User } from '../models/index.js';
+
 const deleteUser = function (id, callback) {
     User.deleteOne({ emailId : id }, (err, user) => {
         if(err) {

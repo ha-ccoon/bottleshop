@@ -1,7 +1,7 @@
 'use strict';
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';  // "npm i bcrypt --save" 설치 필요
-import jwt from "jsonwebtoken"; // 사용하기 위해서는 "npm i jsonwebtoken" 필요
+import jwt from "jsonwebtoken"; // "npm i jsonwebtoken" 설치 필요
 const saltRounds = 10;
 
 const UserSchema = mongoose.Schema(

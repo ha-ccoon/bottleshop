@@ -1,10 +1,8 @@
 'use strict';
 import { User } from '../models/index.js';
-//import jwt from "jsonwebtoken"; // "npm i jsonwebtoken" 설치 필요
 
 const getUser = async (req, res, next) => {
   const {
-    isAdmin,
     emailId,
     domain,
     password,
@@ -23,47 +21,30 @@ const getUser = async (req, res, next) => {
     }
 
     else {
+      const adminValue = false;
+      
       if(emailId === "admin") {
-        const userInfo = await User.create({
-          isAdmin:true,
-          emailId,
-          domain,
-          password,
-          name,
-          phone,
-          birthday,
-          auth_email,
-        });
-        userInfo.save();
-        //console.log("userController.js 44" + userInfo.id);
-
-        console.log('It has been uploaded "USER-ADMIN" in the system');
-        res.send('success "ADMIN"');
+        adminValue = true;
+        console.log("getADMIN");
       }
+      const userInfo = await User.create({
+        isAdmin:adminValue,
+        emailId,
+        domain,
+        password,
+        name,
+        phone,
+        birthday,
+        auth_email,
+      });
+      userInfo.save();
 
-      else {
-        const userInfo = await User.create({
-          isAdmin:false,
-          emailId,
-          domain,
-          password,
-          name,
-          phone,
-          birthday,
-          auth_email,
-        });
-        userInfo.save();
-        //console.log("userController.js 44" + userInfo.id);
-
-        console.log('It has been uploaded "USER" in the system');
-        res.send('success "USER"');
-      }
-    }
-    
+      console.log('It has been uploaded "USER" in the system');
+      res.send('success "USRE"');
+    } 
   } catch (e) {
     console.log(e.message);
   }
 };
 
-
-export { getUser };
+export default getUser;

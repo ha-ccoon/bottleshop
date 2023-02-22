@@ -1,10 +1,10 @@
 'use strict';
 import express from 'express';
-import { auth } from '../middleware/auth.js';
+import auth from '../middleware/auth.js';
 import { User } from '../models/index.js';
 const router = express.Router();
-import { getUser } from '../controller/userController.js';
-import { getLogin } from '../controller/loginController.js';
+import getUser from '../controller/userController.js';
+import getLogin from '../controller/loginController.js';
 import dropUser from '../controller/deleteController.js';
 
 router.get('/', (req, res) => {
@@ -17,12 +17,20 @@ router.get('/join', (req, res, next) => {
 
 router.get("/login", (req, res) => {
     res.render('login');
-})
-
-router.get("/auth", auth, (req, res) => {
-    res.send("token auth ok")
 });
 
+// http://localhost:8080/users/join
+router.post('/join', getUser);
+
+// http://localhost:8080/users/login
+router.post('/login', getLogin);
+
+// http://localhost:8080/users/auth
+router.get("/auth", auth, (req, res) => {
+  res.send("token auth ok")
+});
+
+// http://localhost:8080/users/logout
 router.get("/logout", auth, (req, res) => {
   User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
     if (err) return res.json({ success: false, err });
@@ -33,11 +41,7 @@ router.get("/logout", auth, (req, res) => {
   });
 });
 
-router.delete("/")
-
-
-router.post('/join', getUser);
-router.post('/login', getLogin);
+// http://localhost:8080/users/drop
 router.post('/drop', dropUser);
 
 export default router;
