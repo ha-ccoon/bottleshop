@@ -1,0 +1,36 @@
+'use strict';
+import { User } from '../models/index.js';
+const deleteUser = function (id, callback) {
+    User.deleteOne({ emailId : id }, (err, user) => {
+        if(err) {
+            callback(err, null);
+        }
+        callback(null, user);
+        console.log('document deleted!');
+    });
+}
+
+
+// [input] emailId
+const dropUser = (req, res) => {
+    const id = req.body.emailId;
+    console.log('회원탈퇴할 ID : ' + id);
+    deleteUser(id, (err, user) => {
+        if(err) {
+            console.log('회원 탈퇴 도중 에러 발생');
+            //response.redirect('/modify');
+        }
+        if(user) {
+            console.log('회원 탈퇴 완료');
+            // req.session.destroy((err) => {
+            //     if(err) throw err;
+            //     console.log('로그아웃 완료');
+            // });
+            res.send('delete user');
+        }
+    })
+};
+
+export default dropUser;
+
+    

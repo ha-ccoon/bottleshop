@@ -5,6 +5,7 @@ import { User } from '../models/index.js';
 const router = express.Router();
 import { getUser } from '../controller/userController.js';
 import { getLogin } from '../controller/loginController.js';
+import dropUser from '../controller/deleteController.js';
 
 router.get('/', (req, res) => {
     res.render('users');
@@ -32,8 +33,11 @@ router.get("/logout", auth, (req, res) => {
   });
 });
 
+router.delete("/")
+
 
 router.post('/join', getUser);
 router.post('/login', getLogin);
+router.post('/drop', dropUser);
 
 export default router;

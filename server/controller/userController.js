@@ -23,22 +23,41 @@ const getUser = async (req, res, next) => {
     }
 
     else {
-      const userInfo = await User.create({
-        isAdmin,
-        emailId,
-        domain,
-        password,
-        name,
-        phone,
-        birthday,
-        auth_email,
-      });
+      if(emailId === "admin") {
+        const userInfo = await User.create({
+          isAdmin:true,
+          emailId,
+          domain,
+          password,
+          name,
+          phone,
+          birthday,
+          auth_email,
+        });
+        userInfo.save();
+        //console.log("userController.js 44" + userInfo.id);
 
-      userInfo.save();
-      //console.log("userController.js 44" + userInfo.id);
+        console.log('It has been uploaded "USER-ADMIN" in the system');
+        res.send('success "ADMIN"');
+      }
 
-      console.log('It has been uploaded "USER" in the system');
-      res.send('success "USER"');
+      else {
+        const userInfo = await User.create({
+          isAdmin:false,
+          emailId,
+          domain,
+          password,
+          name,
+          phone,
+          birthday,
+          auth_email,
+        });
+        userInfo.save();
+        //console.log("userController.js 44" + userInfo.id);
+
+        console.log('It has been uploaded "USER" in the system');
+        res.send('success "USER"');
+      }
     }
     
   } catch (e) {
