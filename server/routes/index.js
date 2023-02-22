@@ -1,5 +1,5 @@
-'use strict';
-import express from 'express';
+"use strict";
+import express from "express";
 const router = express.Router();
 
 import usersRouter from './users.js';
@@ -13,8 +13,8 @@ router.use('/shipments', shipmentsRouter);
 router.use('/users', usersRouter);
 
 // http://localhost:8080
-router.get('/', (req, res) => {
-  res.render('index');
+router.get("/", (req, res) => {
+  res.render("index");
 });
 
 export default router;
