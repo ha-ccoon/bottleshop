@@ -3,9 +3,9 @@ import express from 'express';
 import auth from '../middleware/auth.js';
 import { User } from '../models/index.js';
 const router = express.Router();
-import getUser from '../controller/userController.js';
-import getLogin from '../controller/loginController.js';
-import dropUser from '../controller/deleteController.js';
+import getUser from '../controller/users/userController.js';
+import getLogin from '../controller/users/loginController.js';
+import deleteUser from '../controller/users/deleteController.js';
 
 // http://localhost:8080/users : 전체 회원 조회
 router.get('/', auth, async (req, res) => {
@@ -56,7 +56,7 @@ router.get("/logout", auth, (req, res) => {
   });
 });
 
-// http://localhost:8080/users/drop
-router.post('/drop', dropUser);
+// http://localhost:8080/users/delete
+router.post('/delete', deleteUser);
 
 export default router;
