@@ -1,5 +1,5 @@
 'use strict';
-import { Order, User, Product, Guest } from '../../models/index.js';
+import { Order } from '../../models/index.js';
 
 const postOrder = async (req, res, next) => {
   const { user_id, guest_id, product_id, w_count, c_count } = req.body;
@@ -18,8 +18,8 @@ const postOrder = async (req, res, next) => {
     const result = await Order.findOne({ _id: orderInfo._id })
       .where('type')
       .equals('wine')
-      // .populate('product_id', 'type price')
-      // .exec();
+      .populate('product_id', 'type price')
+      .exec();
 
     console.log('saved in database');
     console.log(result);
