@@ -1,13 +1,14 @@
 'use strict';
 import { User } from '../../models/index.js';
 
-const updateUser = async (req, res) => {
+const updateUser = async (req, res, next) => {
+  try{
     const { userId } = req.params;
     const { name, phone, birthday } = req.body;
   
-    // 로그인한 유저와 admin 이외에는 정보 수정 불가능하게
-    if((userId === req.user.userId) || (userId === "admin")) {
-      await User.updateOne(
+    // 로그인한 유저와 admin만 정보 수정 가능
+    if((userId === req.user.userId) || (req.user.isAdmin === true)) {
+      const user = await User.updateOne(
         { userId },
         {
           name,
@@ -15,10 +16,13 @@ const updateUser = async (req, res) => {
           birthday,
         }
       );
-      res.send("success /users/edit");
+      res.send(user);
     } else {
       res.send("access denied /users/edit");
     }
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 export default updateUser;
