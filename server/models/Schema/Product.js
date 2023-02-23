@@ -21,7 +21,7 @@ const ProductSchema = new Schema(
     },
     wine_type: String,
     origin: String,
-    abv: String,
+    abv: Number,
     image_path: {
       type: String,
       required: true,
