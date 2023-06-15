@@ -1,24 +1,32 @@
-# Bottleshop 이용 가이드
+<img src="https://capsule-render.vercel.app/api?type=waving&color=845EC2&height=300&section=header&text=Bottle%20Shop&fontSize=90" />
 
-세계적인 와인들을 즐길 수 있는 와인 쇼핑몰 Bottleshop
+## 프로젝트 설명
 
-한국에서 보기 힘든 여러 와인들을 치즈와 함께 즐겨보세요. 
+세계적인 와인들을 즐길 수 있는 와인 쇼핑몰 Bottleshop </br>
+한국에서 보기 힘든 여러 와인들을 치즈와 함께 즐겨보세요. 와인과 함께 곁들일 수 있는 여러 종류의 치즈도 판매 하고 있습니다.
+- 기간: 2023.02 - 2023.03 (3주)
+- 참여자: FE(2), BE(2)
+- 프로젝트 팀장 및 백엔드 담당
 
-와인과 함께 곁들일 수 있는 여러 종류의 치즈도 판매 하고 있습니다.
-
-프로젝트 기간: 2023.02.13 - 2023.02.03 <br>
-
-배포 주소 : http://34.64.96.43/categories
+## Development Environment
+### Frontend
+- React
+### Backend
+- NodeJS, ExpressJS
+- MongoDB
+### DevOps
+- GCP
+- Nginx, PM2
+### Tools
+- Gitlab
+- Notion
+- Figma
 
 ## 화면 흐름도 (Flow chart)
 ![Bottle Shop drawio (1)](https://user-images.githubusercontent.com/86749331/228192210-5fc48bf1-4228-4994-8d99-fc7c955baf7a.png)
 
-## Development Environment
-Node.js Express Mongoose React Bootstrap
-
-## ERD (Model Diagram)
+## ERD
 ![bottleshop ERD](https://user-images.githubusercontent.com/86749331/228188329-e8f32789-781a-4422-8366-09abd5995f64.png)
-
 
 ## API 명세서
 https://www.notion.so/elice/API-3fdc5a51663349d39e3f01b689bd41e6?pvs=4
@@ -46,7 +54,7 @@ https://www.notion.so/elice/API-3fdc5a51663349d39e3f01b689bd41e6?pvs=4
 | [MERGE] | 원격, 로컬 저장소에서 Merge 할 때 사용 |
 | [RESOLVE] | confilct 고쳤을 때 |
 
-## Codding Convention
+## Code Convention
 <details>
 <summary>변수명</summary>
 <div markdown="1"> 
@@ -69,7 +77,7 @@ https://www.notion.so/elice/API-3fdc5a51663349d39e3f01b689bd41e6?pvs=4
 </div>
 </details>
 
-## Developers & 담당 업무
+## Team: 술사조
 | 이름 | MBTI | 포지션 | 담당 업무 | 이메일 |
 | --- | --- | --- | --- | --- |
 | 손민하 | ENTJ | 백앤드 | 제품, 주문, 배송 | codeminhasohn@gmail.com |
