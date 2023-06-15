@@ -29,7 +29,7 @@
 ![bottleshop ERD](https://user-images.githubusercontent.com/86749331/228188329-e8f32789-781a-4422-8366-09abd5995f64.png)
 
 ## API 명세서
-https://www.notion.so/elice/API-3fdc5a51663349d39e3f01b689bd41e6?pvs=4
+https://www.notion.so/minhasohn/6f6b5817a4be45eba4373a4a31db14ef?v=105bc392a79949fc95d3ce7daea19d58&pvs=4
 
 ## Branch Strategy
 | Branch Name   | 설명                       |
